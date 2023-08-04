@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/distributed.css" />
-    <title>Distribution Page</title>
+    <link rel="stylesheet" href="css\validate.css" />
+
+    <title>Validate</title>
 </head>
 
 <body>
@@ -95,7 +96,37 @@
                 </div>
             </div>
         </header>
+        <main>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Province</th>
+                        <th>District</th>
+                        <th>Petrol Pump Name</th>
+                        <th>Distributed Amount</th>
+                        <th>Sold Amount</th>
+                        <th>Date Of Distribution</th>
+                        <th>Latest Sale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($validation_data as $vd)
+                    <tr>
+                        <td>{{$vd->Id}}</td>
+                        <td>{{$vd->Province}}</td>
+                        <td>{{$vd->District}}</td>
+                        <td>{{$vd->PetrolPumpName}}</td>
+                        <td>{{$vd->DistributedAmount}}</td>
+                        <td>{{$vd->SoldAmount}}</td>
+                        <td>{{$vd->created_at}}</td>
+                        <td>{{$vd->updated_at}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </main>
 
-        <script src="js\distributed.js"></script>
+        <script src="js\validate.js"></script>
     </body>
 </html>

@@ -17,6 +17,8 @@ class tb_sensordatatodays extends Controller
 {
     public function getRecentvalue()
     {
+
+
       $latest_today = tb_senordatatodays::latest()->first();
       $latest_weeks = tb_senordataweeks::latest()->first();
       $latest_months = tb_senordatmonths::latest()->first();
@@ -27,7 +29,7 @@ class tb_sensordatatodays extends Controller
       $value_months = json_decode($latest_months)->sensordatamonth;
       
       
-       return view('npc_dashboard',compact('value_today','value_weeks','value_months'));
+       return view('NPC/npc_dashboard',compact('value_today','value_weeks','value_months'));
 
     }
 }

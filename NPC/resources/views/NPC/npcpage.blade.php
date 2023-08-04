@@ -10,8 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css\notifaction.css" />
-    <title>Notification</title>
+    <link rel="stylesheet" href="css/npcpage.css">
+    <title>NPC Page</title>
   </head>
 
   <body>
@@ -35,38 +35,45 @@
                 class="fa-solid fa-pen-to-square fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="preparation" class="li-pos">Preparation</a>
+              ><a href="npc_prepration" class="li-pos">Preparation</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-van-shuttle fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="distributed" class="li-pos">Distribured</a>
+              ><a href="npc_distributed" class="li-pos">Distributed</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-list-check fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="validate" class="li-pos">Validate</a>
+              ><a href="npc_validate" class="li-pos">Validate</a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-table-columns fa-position"
+                style="color: #54545f"
+              ></i
+              ><a href="npc_permissions" class="li-pos">Permissions</a>
             </li>
 
             <hr id="hrline" />
             <li>
               <i class="fa-solid fa-user fa-position" style="color: #54545f"></i
-              ><a href="profile" class="li-pos">Profile</a>
+              ><a href="npc_profile" class="li-pos">Profile</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-envelope fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="notification" class="li-pos">Notification</a>
+              ><a href="npc_notification" class="li-pos">Notification</a>
             </li>
             <li>
               <i class="fa-solid fa-gear fa-position" style="color: #54545f"></i
-              ><a href="setting" class="li-pos">Setting</a>
+              ><a href="npc_setting" class="li-pos">Setting</a>
             </li>
             <li>
               <i
@@ -80,6 +87,6 @@
       </div>
     </header>
 
-    <script src="js\notifaction.js"></script>
+    <script src="js\npc_page.js"></script>
   </body>
 </html>

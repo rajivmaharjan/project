@@ -10,8 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/distributed.css" />
-    <title>Distribution Page</title>
+    <link rel="stylesheet" href="css/customer.css">
+    <title>Record </title>
   </head>
 
   <body>
@@ -27,29 +27,22 @@
                 class="fa-solid fa-house fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="npc_dashboard" class="li-pos">Dashboard</a>
+              ><a href="npc_dashboard class="li-pos">Dashboard</a>
             </li>
 
             <li>
               <i
-                class="fa-solid fa-pen-to-square fa-position"
+                class="fa-solid fa-magnifying-glass fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="preparation" class="li-pos">Preparation</a>
+              ><a href="search.balde.php" class="li-pos">Search</a>
             </li>
             <li>
               <i
-                class="fa-solid fa-van-shuttle fa-position"
+                class="fa-solid fa-clipboard fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="distributed" class="li-pos">Distribured</a>
-            </li>
-            <li>
-              <i
-                class="fa-solid fa-list-check fa-position"
-                style="color: #54545f"
-              ></i
-              ><a href="validate" class="li-pos">Validate</a>
+              ><a href="record.blade.php" class="li-pos">Record</a>
             </li>
 
             <hr id="hrline" />
@@ -79,6 +72,7 @@
         </div>
       </div>
     </header>
-    <script src="js\distributed.js"></script>
+
+    <script src="js\npc_page.js"></script>
   </body>
 </html>

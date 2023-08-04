@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta http-equiv="refresh" content="15; URL=http://127.0.0.1:8000/npc_dashboard">
+     <meta http-equiv="refresh" content="5" URL=http://127.0.0.1:8000/npc_dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -35,38 +35,45 @@
                 class="fa-solid fa-pen-to-square fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="preparation" class="li-pos">Preparation</a>
+              ><a href="npc_preparation" class="li-pos">Preparation</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-van-shuttle fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="distributed" class="li-pos">Distribured</a>
+              ><a href="npc_distributed" class="li-pos">Distribured</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-list-check fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="validate" class="li-pos">Validate</a>
+              ><a href="npc_validate" class="li-pos">Validate</a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-table-columns fa-position"
+                style="color: #54545f"
+              ></i
+              ><a href="npc_permissions" class="li-pos">Permissions</a>
             </li>
 
             <hr id="hrline" />
             <li>
               <i class="fa-solid fa-user fa-position" style="color: #54545f"></i
-              ><a href="profile" class="li-pos">Profile</a>
+              ><a href="npc_profile" class="li-pos">Profile</a>
             </li>
             <li>
               <i
                 class="fa-solid fa-envelope fa-position"
                 style="color: #54545f"
               ></i
-              ><a href="notification" class="li-pos">Notification</a>
+              ><a href="npc_notification" class="li-pos">Notification</a>
             </li>
             <li>
               <i class="fa-solid fa-gear fa-position" style="color: #54545f"></i
-              ><a href="setting" class="li-pos">Setting</a>
+              ><a href="npc_setting" class="li-pos">Setting</a>
             </li>
 
             <li>
@@ -84,19 +91,19 @@
       <div class="main-cards">
         <div class="card">
           <div class="card-inner">
-            <h3>Region</h3>
+            <h1>Bagmati Province</h1>
           </div>
         </div>
 
         <div class="card">
           <div class="card-inner">
-            <h3>District</h3>
+            <h1>Kathmandu</h1>
           </div>
         </div>
 
         <div class="card">
           <div class="card-inner">
-            <h3>Petrol Pump</h3>
+            <h1>Balkhu Petrol Pump</h1>
           </div>
         </div>
       </div>
@@ -119,22 +126,6 @@
         </div>
       </div>
     </main>
-        <div id="value1" value = {{$value_today}}>
-            @php   
-            echo $value_today;
-
-            @endphp
-    </div>
-
-    <div id="value2" value = {{$value_weeks}}>
-            @php   
-            echo $value_weeks;
-            @endphp
-    </div>
-    <div id="value3" value = {{$value_months}}>
-            @php   
-            echo $value_months;
-            @endphp
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
     <script src="js\npc_dashboard.js"></script>
   </body>

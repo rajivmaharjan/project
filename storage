@@ -1,3 +1,9 @@
+const inputs = document.querySelectorAll(".input-field");
+const toggle_btn = document.querySelectorAll(".toggle");
+const main = document.querySelector("main");
+/*for admin */
+let toggle_bar = document.querySelector(".togg");
+let sidebar = document.querySelector(".navbar");
 if (localStorage.getItem("data_1" && "data_2" && "data_3") == null) {
     var datavalues1 = [];
     var datavalues2 = [];
@@ -22,18 +28,23 @@ function addvalueToarraY() {
     localStorage.setItem("data_2", JSON.stringify(datavalues2));
     localStorage.setItem("data_3", JSON.stringify(datavalues3));
     if (datavalues1.length > 7) {
-        datavalues1.splice(0, 1);
-        datavalues2.splice(0, 1);
-        datavalues3.splice(0, 1);
-        localStorage.setItem("data_1", JSON.stringify(datavalues1));
-        localStorage.setItem("data_2", JSON.stringify(datavalues2));
-        localStorage.setItem("data_3", JSON.stringify(datavalues3));
+        window.localStorage.clear();
     }
 }
 
 console.log(datavalues1);
 console.log(datavalues2);
 console.log(datavalues3);
+
+toggle_btn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        main.classList.toggle("sign-up-mode");
+    });
+});
+
+toggle_bar.addEventListener("click", function () {
+    sidebar.classList.toggle("navbaractive");
+});
 
 var areaChartOptions1 = {
     series: [

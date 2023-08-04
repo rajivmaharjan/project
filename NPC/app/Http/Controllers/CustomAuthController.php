@@ -53,7 +53,7 @@ class CustomAuthController extends Controller
                 }
                 else
                 {
-                    return view('npcpage');
+                    return view('NPC/npcpage');
                     
                 }
                 
@@ -71,19 +71,6 @@ class CustomAuthController extends Controller
         }
     }
 
-    public function npcpage()
-    {
-        return view('npcpage');
-    }
-    public function npc_dashboard()
-    {
-        return view('npc_dashboard');
-    }
-    public function logout()
-    {
 
-       return view("auth.logout");
-
-    }
 
 }

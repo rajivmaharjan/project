@@ -13,7 +13,9 @@
 <body>
     <main>
         <div class="box">
+           
             <div class="inner-box">
+                 
                 <div class="forms-wrap">
                     <form action="{{route('login-user')}}"  class="sign-up-form" method="post">
                         @csrf
@@ -36,19 +38,23 @@
                             </div>
                             <div class="input-wrap">
                                 <p class="text">
-                                    <input type="checkbox" id="tc" name='cb' /> I have read and by creating my user account. I accept the general
                                     <a href="#" class="tggl">Forgot Password?</a>
                                 </p>
                             </div>
 
                             <input type="submit" name="submit" value="Login" class="sign-btn" />
+                            
                             <p class="text">
                                 Not a member?
                                 <a href="#" class="toggle">Create account now</a>
                             </p>
                         </div>
                     </form>
-
+                                    <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="../Img\LB.png" class="image img-1 show" alt="" />
+                    </div>
+                </div>
             </div>
 
         </main>

@@ -21,41 +21,57 @@ if(isset($_POST['api_key']))
     if($api_key == $api_key_value){
  
         $vd = $_POST["verticaldistance"];
-        $timeout = $_POST["timeout"];
-        $daycounter = $_POST["daycounter"];
-        $monthcounter = $_POST["monthcounter"];
-        
-        
-        
+        $hourdecider = $_POST["hourdecider"];
+        $exportdaydata = $_POST["exportdaydata"];
+        $exportmonthdata = $_POST["exportmonthdata"];
+        $exportWeekdata = $_POST["exportWeekdata"];
+        $boot_counter = $_POST["boot_counter"];
+    
         $conn = mysqli_connect( $servername, $username, $password);
 
         if(!$conn){
             die("Connection failed: ". mysqli_connect_error());
         }
-
-        if($timeout == 15 || $timeout == 30 || $timeout == 45 || $timeout == 60 || $timeout == 75 || $timeout == 90 || $timeout == 105 ){
-            
-            
-            $sql="INSERT INTO npc_database.tb_senordatatodays (sensordatatoday) values($vd)";
-
+        if($boot_counter)
+        {
+             $sql="TRUNCATE table npc_database.tb_sensordatatodayhistory";
         }
+        if($hourdecider<=6){
+            $sql="INSERT INTO npc_database.tb_sensordatatodayhistory (sensordatahistory) values($vd);
+            INSERT INTO npc_database.tb_sensordatahours (sensordatahour) values($vd)";
+            
+        }
+        if($exportdaydata)
+        {
+            $sql="INSERT INTO npc_database.tb_senordatatodays (sensordatatoday) values($vd);
+            INSERT INTO npc_database.tb_sensordatatodayhistory (sensordatahistory) values($vd);
+            INSERT INTO npc_database.tb_sensordatahours (sensordatahour) values($vd)";   
+        }
+        if($exportWeekdata)
+        {
+            $sql="INSERT INTO npc_database.tb_senordataweeks (sensordataweeks) values($vd);
+            INSERT INTO npc_database.tb_sensordataweekhistory (sensordataweekhistory) values($vd);
+            INSERT INTO npc_database.tb_senordatatodays (sensordatatoday) values($vd);
+            INSERT INTO npc_database.tb_sensordatatodayhistory (sensordatahistory) values($vd);
+            INSERT INTO npc_database.tb_sensordatahours (sensordatahour) values($vd)";
         
-    
-        if($timeout == 105 && $daycounter<=7 )
-        {
-           
-              
-              $sql="INSERT INTO npc_database.tb_senordataweeks (sensordataweeks) values($vd)";
         }
-        if($monthcounter == 3)
+        if($exportmonthdata)
         {
-              
-              $sql="INSERT INTO npc_database.tb_senordatmonths (sensordatamonth) values($vd)";
+            $sql="INSERT INTO npc_database.tb_senordatmonths (sensordatamonth) values($vd);
+                INSERT INTO npc_database.tb_senordataweeks (sensordataweeks) values($vd);
+                INSERT INTO npc_database.tb_sensordataweekhistory (sensordataweekhistory) values($vd);
+                INSERT INTO npc_database.tb_senordatatodays (sensordatatoday) values($vd)
+                INSERT INTO npc_database.tb_sensordatatodayhistory (sensordatahistory) values($vd);
+                INSERT INTO npc_database.tb_sensordatahours (sensordatahour) values($vd)";
         }
-           
-        if(mysqli_query($conn,$sql))
+
+        
+
+
+        if(mysqli_multi_query($conn,$sql))
         {
-        echo"\nNew record created sucessfully\n";
+            echo"\nOperation sucessfully\n";
 
         }
         else

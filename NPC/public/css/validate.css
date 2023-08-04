@@ -2,111 +2,144 @@
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
-  background-color: #e9e9ef;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
 }
 
 html {
-  font-size: 62.5%;
-  overflow-x: hidden;
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 p,
 a,
 li {
-  font-size: 1.7rem;
-  color: #20262e;
-  overflow-x: hidden;
+    font-size: 1.7rem;
+    color: #20262e;
+    overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .fa-bars {
-  font-size: 3.2rem;
-  cursor: pointer;
+    font-size: 3.2rem;
+    cursor: pointer;
 }
 
 header {
-  height: 6.4rem;
-  display: flex;
-  background-color: #ffffff;
-  align-items: center;
-  left: 106px;
-  padding: 20px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    height: 6.4rem;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    left: 106px;
+    padding: 20px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 #logoimage {
-  position: absolute;
-  width: 21rem;
-  height: 6.4rem;
-  left: 162px;
-  top: 0px;
-  color: #ffffff;
+    position: absolute;
+    width: 21rem;
+    height: 6.4rem;
+    left: 162px;
+    top: 0px;
+    color: #ffffff;
 }
 
 .navbar {
-  height: 100vh;
-  position: absolute;
-  top: 65px;
-  left: 0;
-  transform: translate(-100%);
-  transition: all 0.3s linear;
+    height: 100vh;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    transform: translate(-100%);
+    transition: all 0.3s linear;
 }
 
 .navbar-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 240px;
-  background-color: ffffff;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    background-color: ffffff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-list ul {
-  background-color: ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5.5rem;
-  list-style: none;
-  width: 240px;
+    background-color: ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.5rem;
+    list-style: none;
+    width: 240px;
 }
 
 #hrline {
-  position: absolute;
-  width: 240px;
-  height: 1px;
-  left: 0px;
-  top: 210px;
-  background: #d9d9d9;
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    left: 0px;
+    top: 210px;
+    background: #d9d9d9;
 }
 
 .navbar-list a {
-  position: absolute;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.02em;
-  color: #5a5a5f;
-  left: 72px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #5a5a5f;
+    left: 72px;
 }
 
 .fa-position {
-  padding-top: 5px;
-  position: absolute;
-  left: 32px;
+    padding-top: 5px;
+    position: absolute;
+    left: 32px;
 }
 
 .navbaractive {
-  transform: translate(0%);
+    transform: translate(0%);
+}
+
+.content-table {
+    position: absolute;
+    left: 240px;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9 rem;
+    min-width: 400px;
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px sold #d9d9d9;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
